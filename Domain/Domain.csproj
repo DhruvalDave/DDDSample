@@ -57,6 +57,7 @@
     <Compile Include="DomainModule.cs" />
     <Compile Include="Events\Orders\OrderCreated.cs" />
     <Compile Include="Exceptions\CustomerLimitReachedException.cs" />
+    <Compile Include="Exceptions\DuplicateBranchNameException.cs" />
     <Compile Include="Exceptions\DuplicateEmailException.cs" />
     <Compile Include="Exceptions\EntityNotFoundException.cs" />
     <Compile Include="Infrastructure\AggregateExtensionMethods.cs" />
@@ -69,11 +70,12 @@
     <Compile Include="Infrastructure\IRouteEvents.cs" />
     <Compile Include="Infrastructure\ISpecificationFactory.cs" />
     <Compile Include="Infrastructure\Repository.cs" />
-    <Compile Include="Migrations\201506121010270_initial.cs" />
-    <Compile Include="Migrations\201506121010270_initial.Designer.cs">
-      <DependentUpon>201506121010270_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201506151117187_Initial.cs" />
+    <Compile Include="Migrations\201506151117187_Initial.Designer.cs">
+      <DependentUpon>201506151117187_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Events\Orders\CustomerNameChanged.cs" />
     <Compile Include="Models\Order.cs" />
@@ -85,6 +87,7 @@
     <Compile Include="Specifications\CustomerCreditLimitReached.cs" />
     <Compile Include="Specifications\CustomerExistsSpecification.cs" />
     <Compile Include="Infrastructure\ISpecification.cs" />
+    <Compile Include="Specifications\DuplicateBranchName.cs" />
     <Compile Include="Specifications\DuplicateCustomerEmail.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -92,8 +95,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201506121010270_initial.resx">
-      <DependentUpon>201506121010270_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201506151117187_Initial.resx">
+      <DependentUpon>201506151117187_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

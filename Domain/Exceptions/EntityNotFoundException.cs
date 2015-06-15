@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Exceptions
 {
-    public class EntityNotFoundException:Exception
+    public class EntityNotFoundException : Exception
     {
         public EntityType Entity { get; private set; }
         public Guid EntityId { get; private set; }
@@ -21,7 +21,7 @@ namespace Domain.Exceptions
         {
             Customer,
             Order
-            
+
         }
     }
 }

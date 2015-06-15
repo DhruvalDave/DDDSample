@@ -10,7 +10,7 @@ namespace Domain
 
         public AppContext()
         {
-            
+
         }
 
         public AppContext(string connectionString)
@@ -24,13 +24,15 @@ namespace Domain
 
         public IDbSet<Order> Orders { get; set; }
         public IDbSet<Customer> Customers { get; set; }
-        
+        public IDbSet<Branch> Branches { get; set; }
+
     }
 
-    public interface IAppContext:IDisposable
+    public interface IAppContext : IDisposable
     {
         IDbSet<Order> Orders { get; set; }
         IDbSet<Customer> Customers { get; set; }
+        IDbSet<Branch> Branches { get; set; }
 
         int SaveChanges();
     }
